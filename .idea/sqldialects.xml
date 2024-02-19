@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/lish/form/new_news.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/lish/news/1/index.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/lish/news/index.php" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="MySQL" />
+  </component>
+</project>

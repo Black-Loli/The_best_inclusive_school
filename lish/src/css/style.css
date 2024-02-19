@@ -1,0 +1,1140 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+
+/*меню*/
+
+.container {
+    padding: 80px 20px 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    color: #004dac;
+}
+
+/*меню*/
+
+header.navbar-visible-lg div.container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+header.navbar-visible-lg div.container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+header.navbar-visible-lg div.container ul li,
+header.navbar-visible-sm div.container ul li {
+    margin-left: 15px;
+    padding: 30px 0;
+}
+
+header.navbar-visible-sm div.container ul li {
+    padding: 10px 0;
+}
+
+header.navbar-visible-lg div.container ul li a,
+header.navbar-visible-sm div.container ul li a {
+    color: #004dac;
+    text-decoration: none;
+    padding: 5px 15px 0;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+label.label_menu {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 19px;
+}
+
+input#time_table_01 ~ label.label_menu svg,
+input#time_table_02 ~ label.label_menu svg {
+    stroke: #006CB7;
+    transition: ease-in-out 0.5s;
+    margin-left: 15px;
+}
+
+input#time_table_01:checked ~ label.label_menu svg,
+input#time_table_02:checked ~ label.label_menu svg {
+    transform: rotate(180deg);
+    transition: ease-in-out 0.5s;
+}
+
+input#time_table_01 ~ .dropdown-content,
+input#time_table_02 ~ .dropdown-content {
+    list-style: none;
+}
+
+header.navbar-visible-sm div.container ul li a {
+    padding: 5px 15px 0 0;
+}
+
+header.navbar-visible-lg div.container ul li:hover a.highlighting,
+header.navbar-visible-sm div.container ul li:hover a.highlighting {
+    transform: translateY(-3px);
+    transition: ease-in-out 0.5s;
+    background: transparent;
+    border-bottom: 1px solid #004dac;
+    color: #004dac;
+    text-decoration: none;
+}
+
+header.navbar-visible-lg div.container ul li.lk {
+    margin-top: -7px;
+}
+
+header.navbar-visible-lg div.container ul li.lk:hover a.highlighting {
+    border-bottom: 0;
+}
+
+header.navbar-visible-lg div.container img {
+    height: 110px;
+}
+
+header.navbar-visible-lg div.container ul.dropdown-content,
+header.navbar-visible-sm div.container ul.dropdown-content {
+    display: none;
+}
+
+header.navbar-visible-lg div.container li.dropdown:hover ul.dropdown-content {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 10px 0 0;
+    align-items: flex-start;
+    width: 310px;
+    background: white;
+    z-index: 100;
+}
+
+input {
+    display: none;
+}
+
+input#time_table_01:checked ~ ul.dropdown-content,
+input#time_table_02:checked ~ ul.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+header.navbar-visible-lg div.container ul.dropdown-content li {
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+header.navbar-visible-lg div.container ul.dropdown-content li a:hover {
+    transform: translateY(-3px);
+    transition: ease-in-out 0.5s;
+    background: transparent;
+    border-bottom: 1px solid #004dac;
+    color: #004dac;
+    text-decoration: none;
+}
+
+header.navbar-visible-lg div.container a.logo {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+header.navbar-visible-sm {
+    width: 100%;
+}
+
+header.navbar-visible-sm .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header.navbar-visible-sm .container a.logo {
+    margin: 20px 0;
+}
+
+header.navbar-visible-sm .container a.logo img {
+    height: 80px;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked {
+    max-height: 200px;
+    padding: 15px 0;
+    transition: all 0.5s;
+}
+
+label.menu {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #004dac;
+    padding: 1px;
+}
+
+label.menu:hover {
+    cursor: pointer;
+}
+
+.hide-des {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.menu-line {
+    display: block;
+    width: 12px;
+    height: 1px;
+    margin: 5px 0 4px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    transition: 500ms;
+    transform-origin: right center;
+    background-color: #004dac;
+}
+
+[for="checkbox"] > div > span:nth-child(4),
+[for="checkbox"] > div > span:nth-child(5),
+[for="checkbox"] > div > span:nth-child(6) {
+    border-radius: 0 2px 2px 0;
+    transform-origin: left center;
+}
+
+#checkbox:checked + label span:nth-child(2),
+#checkbox:checked + label span:nth-child(5) {
+    transform: scale(0);
+}
+
+#checkbox:checked + label span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+#checkbox:checked + label span:nth-child(4) {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+#checkbox:checked + label span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+#checkbox:checked + label span:nth-child(6) {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+input#checkbox ~ ul.menu {
+    display: none;
+}
+
+input#checkbox:checked ~ ul.menu {
+    display: flex;
+    position: absolute;
+    left: 0;
+    padding: 0 0 20px 0;
+    top: 120px;
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    z-index: 100;
+    background: white;
+    width: 100%;
+}
+
+/*тело*/
+main .container h5 {
+    margin-bottom: 10px;
+}
+
+main .container ul {
+    margin-bottom: 20px;
+}
+
+main .container ul.mb {
+    margin-bottom: 40px;
+}
+
+main .container ul li {
+    font-size: 20px;
+}
+
+main .container ol li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tab-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tab-list input[type="checkbox"] {
+    display: none;
+}
+
+.tab-list > label:hover,
+input#nearest_tab:checked ~ label,
+input#foto_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_1_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_2_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_3_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_4_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_5_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_6_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_7_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_8_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_9_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_10_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_11_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_1_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_2_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_3_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_4_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_5_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_6_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_7_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_8_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_9_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_10_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_11_tab:checked ~ label,
+a.alma:hover,
+a.alma:focus {
+    transform: translateY(-3px);
+    transition: ease-in-out 1s;
+    box-shadow: 0 10px 10px rgb(0 61 98 / 10%);
+}
+
+.tab-list label,
+a.alma {
+    cursor: pointer;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 20px 20px 20px 15px;
+    border: 1px solid #006CB7;
+    border-radius: 10px;
+    transition: ease-in-out 1s;
+    margin-top: 20px;
+    height: 100px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tab-list > label.school:hover,
+a.alma:hover,
+a.alma:focus {
+    background: #00408F;
+    text-decoration: none;
+}
+
+input#school_tab:checked ~ label,
+input#school_1tab:checked ~ label,
+input#school_2tab:checked ~ label {
+    background: #003577;
+    transform: translateY(-3px);
+    transition: ease-in-out 1s;
+    box-shadow: 0 10px 10px rgb(0 61 98 / 10%);
+}
+
+.tab-list label.school,
+a.alma {
+    background: #004dac;
+    color: white;
+}
+
+svg.click {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: ease-in-out 0.5s;
+}
+
+div.info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+div.info.basic {
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.info h4 {
+    display: flex;
+    margin: 0;
+    font-size: 14px;
+}
+
+div.info.basic h4 {
+    display: flex;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+div.info.basic.next h4 {
+    font-size: 20px;
+}
+
+div.info.basic.next h4:first-child {
+    margin-bottom: 10px;
+}
+
+.school div.info h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+input#nearest_tab ~ div#nearest_tab_content,
+input#foto_tab ~ div#foto_tab_content,
+input#school_tab ~ div#school_tab_content,
+input#school_1tab ~ div#school_1tab_content,
+input#school_2tab ~ div#school_2tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_1_tab ~ div#school_1_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_2_tab ~ div#school_2_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_3_tab ~ div#school_3_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_4_tab ~ div#school_4_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_5_tab ~ div#school_5_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_6_tab ~ div#school_6_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_7_tab ~ div#school_7_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_8_tab ~ div#school_8_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_9_tab ~ div#school_9_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_10_tab ~ div#school_10_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_11_tab ~ div#school_11_tab_content {
+    display: none;
+    transition: ease-in-out 0.5s;
+}
+
+input#nearest_tab:checked ~ div#nearest_tab_content,
+input#foto_tab:checked ~ div#foto_tab_content,
+input#school_tab:checked ~ div#school_tab_content,
+input#school_1tab:checked ~ div#school_1tab_content,
+input#school_2tab:checked ~ div#school_2tab_content {
+    display: flex;
+    transition: ease-in-out 0.5s;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+#foto_tab_content .alma {
+
+}
+
+input:checked ~ div h5,
+input:checked ~ div ul {
+    color: #333;
+}
+
+input:checked ~ div h5,
+input:checked ~ div a {
+    margin-bottom: 15px;
+    font-size: 17px;
+    text-align: justify;
+}
+
+input:checked ~ div h5:last-child {
+    margin: 10px 0 15px;
+}
+
+input:checked ~ div h5:last-child a {
+    margin-left: 10px;
+}
+
+input#school_1_tab:checked ~ label svg.click_1,
+input#school_2_tab:checked ~ label svg.click_2,
+input#school_3_tab:checked ~ label svg.click_3,
+input#school_4_tab:checked ~ label svg.click_4,
+input#school_5_tab:checked ~ label svg.click_5,
+input#school_6_tab:checked ~ label svg.click_6,
+input#school_7_tab:checked ~ label svg.click_7,
+input#school_8_tab:checked ~ label svg.click_8,
+input#school_9_tab:checked ~ label svg.click_9,
+input#school_10_tab:checked ~ label svg.click_10,
+input#school_11_tab:checked ~ label svg.click_11 {
+    transform: rotate(180deg);
+    transition: ease-in-out 0.5s;
+}
+
+input#school_tab:checked ~ div#school_tab_content input#school_1_tab:checked ~ div#school_1_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_2_tab:checked ~ div#school_2_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_3_tab:checked ~ div#school_3_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_4_tab:checked ~ div#school_4_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_5_tab:checked ~ div#school_5_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_6_tab:checked ~ div#school_6_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_7_tab:checked ~ div#school_7_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_8_tab:checked ~ div#school_8_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_9_tab:checked ~ div#school_9_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_10_tab:checked ~ div#school_10_tab_content,
+input#school_tab:checked ~ div#school_tab_content input#school_11_tab:checked ~ div#school_11_tab_content {
+    display: flex;
+    transition: ease-in-out 0.5s;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+main .container .row.row_my {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main .container .row.row_my1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+main .container .row.row_my div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main .container .row.row_my div {
+    width: 100%;
+    /*height: 150px;*/
+}
+
+main .container .row_my h3 {
+    text-align: center;
+}
+
+main .container .row.row_my div img {
+    /*width: 50%;*/
+    max-height: 50px;
+}
+
+main .container .row.row_my div img.big {
+    /*width: 50%;*/
+    max-height: 100px;
+}
+
+main .container .row.row_my div img.sm {
+    /*width: 50%;*/
+    max-height: 30px;
+}
+
+main .container .row.row_my1 div img {
+    /*padding: 0 20px;*/
+}
+
+main .container_map {
+    margin-top: 40px;
+    position: relative;
+}
+
+main .container_map svg.map {
+    fill: #ffffff;
+    stroke: rgba(0, 0, 0, 0.25);
+    stroke-width: 1;
+    transition: fill 0.2s;
+    padding-top: 20px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.container_map svg .modal_open {
+    fill: rgba(0, 64, 143, 0.3);
+}
+
+.container_map svg .modal_open:hover {
+    fill: rgba(0, 64, 143, 0.7);
+}
+
+.container_map svg [data-code]:hover {
+    fill: rgba(0, 64, 143, 0.7);
+}
+
+main .container_map .district {
+    position: absolute;
+    font-weight: normal;
+}
+
+main .container .row.row_my div a img.svg {
+    height: 50px;
+}
+
+main .container .row.row_my div a img.svg2 {
+    height: 100px;
+}
+
+main .container .news {
+    display: grid;
+    grid-gap: 20px 40px;
+    align-items: start;
+    width: 100%;
+    margin-top: 10px;
+}
+
+main .container .news .new h6 {
+    font-size: 12px;
+}
+
+main .container .news .new {
+    text-decoration: none;
+    color: #004dac;
+}
+
+main .container .news .new img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+main .container .news .new h5 {
+    font-size: 16px;
+    text-align: justify;
+}
+
+main .container .news ~ a {
+    color: #004dac;
+    text-decoration: none;
+    padding: 5px 15px 0 0;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+    font-size: 14px;
+    width: 175px;
+    margin-top: 10px;
+}
+
+main .container .news + a:hover {
+    transform: translateY(-3px);
+    transition: ease-in-out 0.5s;
+    background: transparent;
+    border-bottom: 1px solid #004dac;
+    color: #004dac;
+    text-decoration: none;
+}
+
+main .container_new img {
+    margin: 0 auto;
+}
+
+main .container_new h5,
+main .container_new p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+main .container_new p {
+    margin-top: 15px;
+}
+
+main .container_new h6 {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.container .modal_regions {
+    display: none;
+}
+
+.map .modal_open,
+.modal_header_regions svg {
+    cursor: pointer;
+}
+
+.container .modal_regions.active {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 40px 40px;
+    border-radius: 15px;
+    /*margin: 5%;*/
+    background: #FFFFFF;
+    border: 1px solid #00408F;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*.container .modal_regions .modal_header_regions{
+    display: flex;
+}*/
+
+.container .modal_regions .modal_header_regions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container .modal_regions .modal_body_regions div,
+.container .nominations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container .nominations div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container .nominations div svg {
+    margin-right: 10px;
+}
+
+.container .modal_regions .modal_body_regions div a {
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.container .modal_regions .modal_body_regions div a.last {
+    margin-bottom: 0;
+}
+
+.container .modal_regions .modal_body_regions div a.blue {
+    background: rgba(0, 77, 172, 0.1);
+}
+
+.container .modal_regions .modal_body_regions div a.yellow {
+    background: rgba(255, 222, 3, 0.2);
+}
+
+.container .modal_regions .modal_body_regions div a.orange {
+    background: rgba(255, 144, 0, 0.2);
+}
+
+.container .modal_regions .modal_body_regions div a.green {
+    background: rgba(54, 255, 0, 0.2);
+}
+
+.container .nominations p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.container .modal_regions .modal_body_regions div a:hover {
+    text-decoration: none;
+}
+
+.container .modal_regions svg {
+    width: 20px;
+    stroke: none;
+}
+
+.container .modal_regions h4 {
+    margin: 0;
+}
+
+
+/*подвал*/
+footer {
+    border-top: 1px solid #004dac;
+    color: #004dac;
+    margin-top: 40px;
+}
+
+footer div.footer {
+    color: #004dac;
+}
+
+footer div.container .row .col:nth-child(5) {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+footer div.container .row .col {
+    display: flex;
+    flex-direction: column;
+}
+
+footer div.container .row .col h2 {
+    font-size: 20px;
+}
+
+footer div.container .row .col h4,
+footer div.container .row .col a {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+footer div.container .row .col a {
+    color: #004dac;
+}
+
+footer div.container .row .col ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer div.container .row .col li {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+
+footer div.container .row .col li:hover {
+    cursor: pointer;
+}
+
+footer div.container .row .col li:hover a,
+footer div.container .row .col a:hover {
+    color: #004dac;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer h4 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.form {
+    margin-bottom: 10px;
+}
+
+input.form {
+    display:flex;
+    width: 100%;
+}
+
+textarea.form {
+    display:flex;
+    width: 100%;
+    height: 500px;
+}
+
+.form-btn {
+    background: #004dac;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+}
+
+.form-btn {
+    transition: ease-in-out 0.5s;
+}
+
+.form-btn:hover {
+    background: #00408F;
+    transform: translateY(-3px);
+    transition: ease-in-out 0.5s;
+    box-shadow: 0 10px 10px rgb(0 61 98 / 10%);
+}
+
+
+
+/*для разных экранов*/
+@media screen and (min-width: 320px) and (max-width: 859px) {
+    .container .district {
+        top: 0;
+        left: 0;
+    }
+
+    .container .district h5 {
+        font-size: 16px;
+    }
+
+    header.navbar-visible-lg {
+        display: none;
+    }
+
+    header.navbar-visible-sm {
+        display: flex;
+    }
+
+    header.navbar-visible-sm .container {
+        padding: 0 10px;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+        padding: 80px 10px 0;
+    }
+
+    footer div.container .row {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    footer div.container .row .col {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    div#nearest_tab_content img {
+        width: 95%;
+        margin: 5px auto 20px;
+    }
+
+    div#school_1_tab_content img,
+    div#school_2_tab_content img,
+    div#school_3_tab_content img,
+    div#school_4_tab_content img,
+    div#school_5_tab_content img,
+    div#school_6_tab_content img,
+    div#school_7_tab_content img,
+    div#school_8_tab_content img,
+    div#school_9_tab_content img,
+    div#school_10_tab_content img,
+    div#school_11_tab_content img {
+        max-width: 270px;
+        margin: 5px auto 20px;
+    }
+
+    iframe {
+        width: 256px;
+        height: 144px;
+        margin: 5px auto 20px;
+    }
+
+    main .container .row.row_my1 div,
+    main .container .row.row_my .org {
+        width: 100%;
+    }
+
+    /*iframe.maps {
+        width: 100%;
+        margin: 5px auto 20px;
+    }*/
+    main .container .news {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main .container .news .new {
+        grid-column: auto;
+        margin-bottom: 20px;
+    }
+
+    main .container .news .new.card_none,
+    main .container .news .new.card_none_a {
+        display: none;
+    }
+
+    main .container_new img {
+        width: 100%
+    }
+}
+
+@media screen and (min-width: 860px) and (max-width: 1279px) {
+    .container .district {
+        top: 0;
+        left: 0;
+    }
+
+    .container .district h5 {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 820px;
+        padding: 80px 20px 0;
+    }
+
+    header.navbar-visible-lg {
+        display: none;
+    }
+
+    header.navbar-visible-sm {
+        display: flex;
+    }
+
+    header.navbar-visible-sm .container {
+        padding: 0 20px;
+    }
+
+    footer div.container .row {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    footer div.container .row .col {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    div#nearest_tab_content img {
+        max-width: 600px;
+        margin: 5px auto 20px;
+    }
+
+    div#school_1_tab_content img,
+    div#school_2_tab_content img,
+    div#school_3_tab_content img,
+    div#school_4_tab_content img,
+    div#school_5_tab_content img,
+    div#school_6_tab_content img,
+    div#school_7_tab_content img,
+    div#school_8_tab_content img,
+    div#school_9_tab_content img,
+    div#school_10_tab_content img,
+    div#school_11_tab_content img {
+        max-width: 450px;
+        margin: 5px auto 20px;
+    }
+
+    iframe {
+        width: 656px;
+        height: 369px;
+        margin: 5px auto 20px;
+    }
+
+    main .container .row.row_my1 div,
+    main .container .row.row_my .org {
+        width: 100%;
+    }
+
+    /*iframe.maps {
+        width: 100%;
+        margin: 5px auto 20px;
+    }*/
+
+    main .container .news {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main .container .news .new {
+        grid-column: auto;
+    }
+
+    main .container .news .new.card_none_a {
+        display: none;
+    }
+
+    main .container_new img {
+        width: 50%
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container .district {
+        top: 0;
+        left: 30px;
+    }
+
+    .container .district h5 {
+        font-size: 18px;
+    }
+
+    header.navbar-visible-lg {
+        display: flex;
+    }
+
+    header.navbar-visible-sm {
+        display: none;
+    }
+
+    .container {
+        width: 1240px;
+        padding: 80px 20px 0;
+    }
+
+    footer div.container .row {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    footer div.container .row .col {
+        width: calc(20% - 20px);
+        margin-right: 20px;
+    }
+
+    div#nearest_tab_content img {
+        max-width: 600px;
+        margin: 5px auto 20px;
+    }
+
+    div#school_1_tab_content img,
+    div#school_2_tab_content img,
+    div#school_3_tab_content img,
+    div#school_4_tab_content img,
+    div#school_5_tab_content img,
+    div#school_6_tab_content img,
+    div#school_7_tab_content img,
+    div#school_8_tab_content img,
+    div#school_9_tab_content img,
+    div#school_10_tab_content img,
+    div#school_11_tab_content img {
+        max-width: 450px;
+        margin: 5px auto 20px;
+    }
+
+    iframe {
+        width: 1088px;
+        height: 612px;
+        margin: 5px auto 20px;
+    }
+
+    /*iframe.maps {
+        width: 100%;
+        margin: 5px auto 20px;
+    }*/
+    main .container .row.row_my .org {
+        width: 50%;
+    }
+
+    main .container .row.row_my1 div {
+        width: 100%;
+    }
+
+    main .container .news {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main .container .news .new {
+        grid-column: auto;
+    }
+
+    main .container_new img {
+        width: 50%
+    }
+}

@@ -1,0 +1,129 @@
+body {
+    background: white;
+}
+
+.container_map svg {
+    fill: #ffffff;
+    stroke: rgba(0, 0, 0, 0.25);
+    stroke-width: 1;
+    transition: fill 0.2s;
+    padding-top: 20px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.container_map svg .modal_open {
+    fill: rgba(0, 64, 143, 0.3);
+}
+
+.container_map svg .modal_open:hover {
+    fill: rgba(0, 64, 143, 0.7);
+}
+
+.container_map svg [data-code]:hover {
+    fill: rgba(0, 64, 143, 0.7);
+}
+
+.container .district {
+    position: absolute;
+    font-weight: normal;
+}
+
+.container .modal_regions {
+    display: none;
+}
+
+.map .modal_open {
+    cursor: pointer;
+
+}
+
+.container .modal_regions.active {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 40px 40px;
+    border-radius: 15px;
+    /*margin: 5%;*/
+    background: #FFFFFF;
+    border: 1px solid #00408F;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*.container .modal_regions .modal_header_regions{
+    display: flex;
+}*/
+
+.container .modal_regions .modal_header_regions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container .modal_regions .modal_body_regions div,
+.container .nominations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container .nominations div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container .nominations div svg{
+    margin-right: 10px;
+}
+
+.container .modal_regions .modal_body_regions div a {
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.container .modal_regions .modal_body_regions div a.last{
+    margin-bottom: 0;
+}
+
+.container .modal_regions .modal_body_regions div a.blue {
+    background: rgba(0,77,172,0.1);
+}
+
+.container .modal_regions .modal_body_regions div a.yellow {
+    background: rgba(255,222,3,0.2);
+}
+
+.container .modal_regions .modal_body_regions div a.orange {
+    background: rgba(255,144,0,0.2);
+}
+
+.container .modal_regions .modal_body_regions div a.green {
+    background: rgba(54,255,0,0.2);
+}
+
+.container .nominations p{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.container .modal_regions .modal_body_regions div a:hover {
+    text-decoration: none;
+}
+
+.container .modal_regions svg {
+    width: 20px;
+    stroke: none;
+}
+
+.container .modal_regions h4 {
+    margin: 0;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a9a68d84-d4db-401b-82d5-410d960872d7" name="LISH" url="http://lish.mgppu.ru">
+        <fileTransfer rootFolder="/var/www/html" accessType="SFTP" host="195.133.239.215" port="2225" sshConfigId="a1bfb538-2abb-4bd3-a7e6-41c56170026c" sshConfig="inside@195.133.239.215:2225 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="27c6045e-88e4-4295-848e-03ad15a591ed" name="lish LOCAL" url="http://192.168.76.103">
+        <fileTransfer host="192.168.76.103" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
