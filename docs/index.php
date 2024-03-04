@@ -15,7 +15,7 @@
       <div class="col-sm-6">
           <h3>Положение ЛИШ</h3>
         <button type="button" class="btn btn-success btn-lg">
-          <a href="../src/docs/Положение о ЛИШР-2023.pdf" target="_blank" rel="noopener" style="color: white;">
+          <a href=" " target="_blank" rel="noopener" style="color: white;">
             Cкачать
           </a>
         </button>
@@ -25,7 +25,7 @@
       <div class="col-sm-6">
         <h3>Письмо в регионы</h3>
         <button type="button" class="btn btn-success btn-lg">
-          <a href="../src/docs/АБ-1969_07 от 03.05.2023.pdf" target="_blank" rel="noopener" style="color: white;">
+          <a href=" " target="_blank" rel="noopener" style="color: white;">
             Cкачать
           </a>
         </button>

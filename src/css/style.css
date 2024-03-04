@@ -311,6 +311,7 @@ input#school_tab:checked ~ div#school_tab_content input#school_8_tab ~ label:hov
 input#school_tab:checked ~ div#school_tab_content input#school_9_tab ~ label:hover,
 input#school_tab:checked ~ div#school_tab_content input#school_10_tab ~ label:hover,
 input#school_tab:checked ~ div#school_tab_content input#school_11_tab ~ label:hover,
+input#school_tab:checked ~ div#school_tab_content input#school_12_tab ~ label:hover,
 input#school_tab:checked ~ div#school_tab_content input#school_1_tab:checked ~ label,
 input#school_tab:checked ~ div#school_tab_content input#school_2_tab:checked ~ label,
 input#school_tab:checked ~ div#school_tab_content input#school_3_tab:checked ~ label,
@@ -322,7 +323,7 @@ input#school_tab:checked ~ div#school_tab_content input#school_8_tab:checked ~ l
 input#school_tab:checked ~ div#school_tab_content input#school_9_tab:checked ~ label,
 input#school_tab:checked ~ div#school_tab_content input#school_10_tab:checked ~ label,
 input#school_tab:checked ~ div#school_tab_content input#school_11_tab:checked ~ label,
-input#school_tab:checked ~ div#school_tab_content input#school_11_tab:checked ~ label,
+input#school_tab:checked ~ div#school_tab_content input#school_12_tab:checked ~ label,
 a.alma:hover,
 a.alma:focus {
     transform: translateY(-3px);
@@ -436,7 +437,8 @@ input#school_tab_1:checked ~ div#school_tab_1_content input#school_7_tab ~ div#s
 input#school_tab_1:checked ~ div#school_tab_1_content input#school_8_tab ~ div#school_8_tab_content,
 input#school_tab_1:checked ~ div#school_tab_1_content input#school_9_tab ~ div#school_9_tab_content,
 input#school_tab_1:checked ~ div#school_tab_1_content input#school_10_tab ~ div#school_10_tab_content,
-input#school_tab_1:checked ~ div#school_tab_1_content input#school_11_tab ~ div#school_11_tab_content {
+input#school_tab_1:checked ~ div#school_tab_1_content input#school_11_tab ~ div#school_11_tab_content,
+input#school_tab_1:checked ~ div#school_tab_1_content input#school_12_tab ~ div#school_12_tab_content {
     display: none;
     transition: ease-in-out 0.5s;
 }
@@ -490,7 +492,8 @@ input#school_7_tab:checked ~ label svg.click_7,
 input#school_8_tab:checked ~ label svg.click_8,
 input#school_9_tab:checked ~ label svg.click_9,
 input#school_10_tab:checked ~ label svg.click_10,
-input#school_11_tab:checked ~ label svg.click_11 {
+input#school_11_tab:checked ~ label svg.click_11,
+input#school_12_tab:checked ~ label svg.click_12 {
     transform: rotate(180deg);
     transition: ease-in-out 0.5s;
 }
@@ -505,7 +508,8 @@ input#school_tab_1:checked ~ div#school_tab_1_content input#school_7_tab:checked
 input#school_tab_1:checked ~ div#school_tab_1_content input#school_8_tab:checked ~ div#school_8_tab_content,
 input#school_tab_1:checked ~ div#school_tab_1_content input#school_9_tab:checked ~ div#school_9_tab_content,
 input#school_tab_1:checked ~ div#school_tab_1_content input#school_10_tab:checked ~ div#school_10_tab_content,
-input#school_tab_1:checked ~ div#school_tab_1_content input#school_11_tab:checked ~ div#school_11_tab_content {
+input#school_tab_1:checked ~ div#school_tab_1_content input#school_11_tab:checked ~ div#school_11_tab_content,
+input#school_tab_1:checked ~ div#school_tab_1_content input#school_12_tab:checked ~ div#school_12_tab_content {
     display: flex;
     transition: ease-in-out 0.5s;
     flex-direction: column;
@@ -836,6 +840,10 @@ footer div.container .row .col a:hover {
     font-size: 16px;
 }
 
+.logo__footer {
+    width: 100%;
+}
+
 /*для разных экранов*/
 @media screen and (min-width: 320px) and (max-width: 859px) {
     .container .district {
@@ -896,7 +904,8 @@ footer div.container .row .col a:hover {
     div#school_8_tab_content img,
     div#school_9_tab_content img,
     div#school_10_tab_content img,
-    div#school_11_tab_content img {
+    div#school_11_tab_content img,
+    div#school_12_tab_content img {
         max-width: 270px;
         margin: 5px auto 20px;
     }
@@ -996,7 +1005,8 @@ footer div.container .row .col a:hover {
     div#school_8_tab_content img,
     div#school_9_tab_content img,
     div#school_10_tab_content img,
-    div#school_11_tab_content img {
+    div#school_11_tab_content img,
+    div#school_12_tab_content img {
         max-width: 450px;
         margin: 5px auto 20px;
     }
@@ -1048,7 +1058,7 @@ footer div.container .row .col a:hover {
         width: 600px;
     }
 
-    .container .district h5{
+    .container .district h5 {
         font-size: 18px;
     }
 
@@ -1077,7 +1087,7 @@ footer div.container .row .col a:hover {
         margin-right: 20px;
     }
 
-    div#nearest_tab_content img{
+    div#nearest_tab_content img {
         max-width: 600px;
         margin: 5px auto 20px;
     }
@@ -1092,7 +1102,8 @@ footer div.container .row .col a:hover {
     div#school_8_tab_content img,
     div#school_9_tab_content img,
     div#school_10_tab_content img,
-    div#school_11_tab_content img {
+    div#school_11_tab_content img,
+    div#school_12_tab_content img {
         max-width: 450px;
         margin: 5px auto 20px;
     }
@@ -1102,11 +1113,6 @@ footer div.container .row .col a:hover {
         height: 612px;
         margin: 5px auto 20px;
     }
-
-    /*iframe.maps {
-        width: 100%;
-        margin: 5px auto 20px;
-    }*/
 
     main .container .row.row_my .org {
         width: 50%;
